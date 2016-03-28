@@ -4,6 +4,16 @@ pure js link shortener, just for fun - featuring: es2016 goodness
 # install
 npm install
 
+##db config
+Setup for mongodb
+Create two collections:
+counter, links
+insert into counter collection initial counter values:
+{
+  obj: 'counter',
+  seq: 0
+}
+
 # run
 node index
 
