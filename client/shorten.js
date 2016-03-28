@@ -30,7 +30,7 @@ var Shortener = {
             console.log(xhr.responseText);
           }
         }
-      )
-    })
+      );
+    });
   }
-}
+};

@@ -12,26 +12,28 @@ const model = createModel(db);
 const app = express();
 
 app.set('trust proxy', true);
-
+// Serve static files
 app.use('/', express.static(__dirname + '/client'));
-// Generate short url route
+// Generate shortened url route
 app.use('/api', api(model));
-// Lookup tinylink and route to proper website url
+// Lookup shortened url and redirect to proper website url
 app.use('/', lookup(model));
 
-// Basic 404 handler
+// Generic 404 handler
 app.use((req, res) => {
   res.status(404).send('Not Found');
 });
-// Basic error handler
+
+// Generic error handler
 app.use((err, req, res) => {
   if (env === 'dev') {
     console.log(err);
     res.status(500).send(err.response || 'error, no response included!');
   } else {
-    res.status(500).send('internal server error');
+    res.status(500).send('Internal server error');
   }
 });
+
 app.listen(port, () => {
   console.log(`Link shortner listening on port ${port}`);
   console.log('http://baseurl/ for ui to create a shortlink');

@@ -21,4 +21,5 @@ insert into counter collection initial counter values:
 node index
 
 # notes
-i know redis would be a better db, but i chose mongo just to see how a document storage would work here.
+I know redis would be a better db, but I chose mongo just to see how a document storage would work here.
+I wrote the db layer so it can be easily swappable. 
