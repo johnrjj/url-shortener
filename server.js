@@ -5,7 +5,7 @@ import lookup from './lib/routes/lookup';
 import createModel from './lib/model';
 import createDatabase from './lib/db';
 
-const env = process.env.NODE_ENV || 'dev';
+const env = config.env;
 const port = config.port;
 const db = createDatabase(config);
 const model = createModel(db);

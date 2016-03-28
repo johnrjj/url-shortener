@@ -1,5 +1,6 @@
 const config = {
   port: process.env.PORT || 8080,
+  env: process.env.NODE_ENV || 'dev',
   mongodb: {
     url: process.env.MONGO_URL || 'mongodb://localhost:27017/local',
     linksCollection: process.env.MONGO_LINKS_COLLECTION || 'links',
