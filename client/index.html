@@ -1,0 +1,24 @@
+<head>
+  <title>Link Shortener</title>
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="shorten.js"></script>
+  <script type="text/javascript">
+    Shortener.url = "http://localhost:8080";
+  </script>
+</head>
+<body>
+  <div id="container">
+    <form action="/api/" method="post">
+      <h1 class="logo">
+        Link Shortener
+      </h1>
+      <input id="input-url" placeholder="Enter a URL to shorten..." type="text">
+      <button>Shorten</button>
+    </form>
+  </div>
+  <div>
+    <p id="output-url"></p>
+  </div>
+</body>
+<footer>
+</footer>
