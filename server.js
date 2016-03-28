@@ -27,7 +27,7 @@ app.use((req, res) => {
 app.use((err, req, res) => {
   if (env === 'dev') {
     console.log(err);
-    res.status(500).send(err.response || 'no error response!');
+    res.status(500).send(err.response || 'error, no response included!');
   } else {
     res.status(500).send('internal server error');
   }
