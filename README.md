@@ -6,13 +6,16 @@ npm install
 
 ##db config
 Setup for mongodb
-Create two collections:
-counter, links
+
+Create two collections: counter, links
+
 insert into counter collection initial counter values:
+```
 {
   obj: 'counter',
   seq: 0
 }
+```
 
 # run
 node index
